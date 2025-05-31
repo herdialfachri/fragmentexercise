@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fragmentexercise.botnav.DashboardFragment
+import com.example.fragmentexercise.botnav.HistoryFragment
 import com.example.fragmentexercise.botnav.HomeFragment
 import com.example.fragmentexercise.botnav.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -43,11 +44,18 @@ class MainActivity : AppCompatActivity() {
                     moveStripToIndex(1)
                     true
                 }
+                R.id.nav_history -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, HistoryFragment())
+                        .commit()
+                    moveStripToIndex(2)
+                    true
+                }
                 R.id.nav_profile -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, ProfileFragment())
                         .commit()
-                    moveStripToIndex(2)
+                    moveStripToIndex(3)
                     true
                 }
                 else -> false
