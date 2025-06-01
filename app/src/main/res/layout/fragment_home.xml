@@ -16,14 +16,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
             android:text="Halo, Kujang!"
-            android:textSize="20sp"/>
+            android:textSize="16sp"/>
 
         <ImageView
             android:id="@+id/scannerIv"
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_alignTop="@id/userTv"
             android:layout_marginEnd="8dp"
             android:src="@drawable/baseline_document_scanner_24"
@@ -31,8 +30,8 @@
 
         <ImageView
             android:id="@+id/accountIv"
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_alignTop="@id/userTv"
             android:src="@drawable/baseline_account_gray_circle_24"
             android:layout_alignParentEnd="true"/>
@@ -40,7 +39,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="180dp"
         app:cardCornerRadius="12dp"
         android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
@@ -60,7 +59,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:paddingHorizontal="16dp"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:layout_marginTop="8dp"
         android:text="Semua barang"
         app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24" />
