@@ -102,7 +102,7 @@
         android:paddingVertical="12dp"
         android:drawablePadding="8dp"
         app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
-        app:drawableStartCompat="@drawable/baseline_campaign_24" />
+        app:drawableStartCompat="@drawable/baseline_shopping_cart_24" />
 
     <TextView
         android:id="@+id/bayarTv"
