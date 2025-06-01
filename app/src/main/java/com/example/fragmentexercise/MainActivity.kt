@@ -1,8 +1,10 @@
 package com.example.fragmentexercise
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.fragmentexercise.botnav.DashboardFragment
 import com.example.fragmentexercise.botnav.HistoryFragment
 import com.example.fragmentexercise.botnav.HomeFragment
@@ -15,19 +17,55 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Ambil preferensi terlebih dahulu
+        val preferences = getSharedPreferences("settings", Context.MODE_PRIVATE)
+        val isNightMode = preferences.getBoolean("night_mode", false)
+        val lastFragment = preferences.getString("last_fragment", "home")
+
+        if (isNightMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         indicatorStrip = findViewById(R.id.indicatorStrip)
         bottomNav = findViewById(R.id.bottom_navigation)
 
-        // Set default fragment dan posisi strip
+        // Tentukan fragment awal berdasarkan preferensi
+        val initialIndex = when (lastFragment) {
+            "profile" -> 3
+            "history" -> 2
+            "dashboard" -> 1
+            else -> 0
+        }
+
+        val initialFragment = when (lastFragment) {
+            "profile" -> ProfileFragment()
+            "history" -> HistoryFragment()
+            "dashboard" -> DashboardFragment()
+            else -> HomeFragment()
+        }
+
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, HomeFragment())
+            .replace(R.id.fragment_container, initialFragment)
             .commit()
 
-        bottomNav.post { moveStripToIndex(0) }
+        bottomNav.selectedItemId = when (initialIndex) {
+            1 -> R.id.nav_dashboard
+            2 -> R.id.nav_history
+            3 -> R.id.nav_profile
+            else -> R.id.nav_home
+        }
 
+        bottomNav.post { moveStripToIndex(initialIndex) }
+
+        // Reset fragment terakhir agar tidak berulang terus
+        preferences.edit().remove("last_fragment").apply()
+
+        // Setup navigasi
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> {
