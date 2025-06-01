@@ -14,13 +14,10 @@ class SplashActivity : AppCompatActivity() {
         val pref = SharedPrefManager(this)
 
         if (pref.isFirstTimeLaunch()) {
-            // Belum pernah buka onboarding
             startActivity(Intent(this, OnboardingActivity::class.java))
         } else {
-            // Sudah pernah, langsung ke Main
             startActivity(Intent(this, MainActivity::class.java))
         }
-
         finish()
     }
 }
