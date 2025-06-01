@@ -1,13 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="Profile" />
+
+        <Switch
+            android:id="@+id/switchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/userIv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_account_circle_24" />
+
+        <TextView
+            android:id="@+id/usernameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/userIv"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/userIv"
+            android:text="Jhon Doe" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jhondoe@example.com"
+            android:layout_below="@id/usernameTv"
+            android:textSize="14sp"
+            android:layout_alignStart="@id/usernameTv" />
+
+        <TextView
+            android:id="@+id/handphoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+6282100998877"
+            android:layout_below="@id/emailTv"
+            android:textSize="14sp"
+            android:layout_alignStart="@id/usernameTv" />
+
+        <ImageView
+            android:id="@+id/editIv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_edit_24"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/usernameTv" />
+    </RelativeLayout>
 
     <TextView
-        android:layout_gravity="center"
-        android:text="Profile Fragment"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:text="Akun"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/pesanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cara pesan"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="18dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_campaign_24" />
+
+    <TextView
+        android:id="@+id/bayarTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cara bayar"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="18dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_payment_24" />
+
+    <TextView
+        android:id="@+id/bantuanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pusat bantuan"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="18dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_help_24" />
+
+    <TextView
+        android:id="@+id/ajaktemanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajak teman, dapat voucher"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="10dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_group_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info lainnya"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <TextView
+        android:id="@+id/kebijakanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kebijakan privasi"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="18dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_privacy_tip_24" />
+</LinearLayout>
