@@ -7,9 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.fragmentexercise.LoginActivity
 import com.example.fragmentexercise.OnboardingActivity
 import com.example.fragmentexercise.R
+import com.example.fragmentexercise.auth.LoginActivity
 import com.example.fragmentexercise.helper.SharedPrefManager
 
 class OnboardingFragment3 : Fragment() {

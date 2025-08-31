@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.example.fragmentexercise.auth.LoginActivity
 import com.example.fragmentexercise.onboarding.OnboardingAdapter
 
 class OnboardingActivity : AppCompatActivity() {
