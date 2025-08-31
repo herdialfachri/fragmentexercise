@@ -6,8 +6,8 @@
         android:icon="@drawable/baseline_home_filled_24"/>
     <item
         android:id="@+id/nav_dashboard"
-        android:title="Keranjang"
-        android:icon="@drawable/baseline_shopping_cart_24"/>
+        android:title="Teknisi"
+        android:icon="@drawable/baseline_handyman_24"/>
     <item
         android:id="@+id/nav_history"
         android:title="Riwayat"

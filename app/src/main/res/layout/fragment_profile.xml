@@ -9,23 +9,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
+        android:padding="16dp"
         android:paddingBottom="8dp"
         android:paddingHorizontal="16dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:text="Profil saya" />
-
-        <Switch
-            android:id="@+id/switchTheme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
     </RelativeLayout>
 
     <View
@@ -52,7 +45,7 @@
             android:layout_marginStart="12dp"
             android:textStyle="bold"
             android:layout_marginTop="4dp"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:layout_toEndOf="@id/userIv"
             android:text="Jhon Doe" />
 
@@ -62,7 +55,7 @@
             android:layout_height="wrap_content"
             android:text="jhondoe@example.com"
             android:layout_below="@id/usernameTv"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:layout_alignStart="@id/usernameTv" />
 
         <TextView
@@ -71,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="+6282100998877"
             android:layout_below="@id/emailTv"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:layout_alignStart="@id/usernameTv" />
 
         <ImageView
@@ -97,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cara pesan"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp"
         android:drawablePadding="8dp"
@@ -109,7 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cara bayar"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp"
         android:drawablePadding="8dp"
@@ -121,7 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pusat bantuan"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp"
         android:drawablePadding="8dp"
@@ -133,7 +126,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ajak teman, dapat voucher"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp"
         android:drawablePadding="8dp"
@@ -154,10 +147,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Kebijakan privasi"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp"
         android:drawablePadding="8dp"
         app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
         app:drawableStartCompat="@drawable/baseline_privacy_tip_24" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/appMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_lightbulb_24"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:drawablePadding="8dp"
+            android:text="Matikan Lampu"/>
+
+        <Switch
+            android:id="@+id/switchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="8dp"
+            android:layout_alignTop="@id/appMode"
+            android:layout_alignBottom="@id/appMode"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </RelativeLayout>
 </LinearLayout>
