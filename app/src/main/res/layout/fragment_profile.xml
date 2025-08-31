@@ -115,7 +115,7 @@
             <RelativeLayout
                 android:padding="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/infoTv"
@@ -133,6 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
+                <!-- Email -->
                 <TextView
                     android:id="@+id/emailTv"
                     android:text="username@example.com"
@@ -142,41 +143,85 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
+                <View
+                    android:id="@+id/dividerEmail"
+                    android:layout_below="@id/emailTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Role -->
                 <TextView
                     android:id="@+id/roleTv"
-                    android:layout_below="@id/emailTv"
+                    android:layout_below="@id/dividerEmail"
                     android:textSize="14sp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     android:text="Normal User"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
+                <View
+                    android:id="@+id/dividerRole"
+                    android:layout_below="@id/roleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Phone -->
                 <TextView
                     android:id="@+id/phoneTv"
-                    android:layout_below="@id/roleTv"
+                    android:layout_below="@id/dividerRole"
                     android:textSize="14sp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     android:text="082122009090"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
+                <View
+                    android:id="@+id/dividerPhone"
+                    android:layout_below="@id/phoneTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Domisili -->
                 <TextView
                     android:id="@+id/domisiliTv"
-                    android:layout_below="@id/phoneTv"
+                    android:layout_below="@id/dividerPhone"
                     android:textSize="14sp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="14dp"
                     android:text="Nanggeleng, Kota Sukabumi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
+                <View
+                    android:id="@+id/dividerDomisili"
+                    android:layout_below="@id/domisiliTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="4dp"/>
+
+                <!-- Specialization -->
                 <TextView
                     android:id="@+id/specializationTv"
                     android:textSize="14sp"
-                    android:layout_below="@id/domisiliTv"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/dividerDomisili"
+                    android:layout_marginTop="14dp"
                     android:text="Tukang Genteng"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+
+                <View
+                    android:id="@+id/dividerSpecialization"
+                    android:layout_below="@id/specializationTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginTop="4dp"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
