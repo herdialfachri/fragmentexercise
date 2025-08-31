@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:paddingTop="16dp"
         android:paddingBottom="8dp"
         android:paddingHorizontal="16dp">
 
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="Profil saya" />
+            android:text="My Profile" />
     </RelativeLayout>
 
     <View
@@ -29,7 +29,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        android:paddingHorizontal="16dp">
 
         <ImageView
             android:id="@+id/userIv"
@@ -178,5 +180,14 @@
             android:layout_alignTop="@id/appMode"
             android:layout_alignBottom="@id/appMode"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_margin="16dp"
+            android:padding="14dp"
+            android:text="Sign Out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switchTheme"/>
     </RelativeLayout>
 </LinearLayout>
