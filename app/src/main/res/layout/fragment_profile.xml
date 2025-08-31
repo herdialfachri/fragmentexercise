@@ -4,190 +4,180 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
-        android:paddingBottom="8dp"
-        android:paddingHorizontal="16dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:text="My Profile" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#CCCCCC" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="24dp"
-        android:paddingBottom="16dp"
         android:paddingHorizontal="16dp">
 
         <ImageView
+            android:id="@+id/settingBtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_settings_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/profileTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="My Profile"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
             android:id="@+id/userIv"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/baseline_account_circle_24" />
 
         <TextView
             android:id="@+id/usernameTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/userIv"
-            android:layout_marginStart="12dp"
+            android:layout_below="@id/userIv"
+            android:text="Username"
             android:textStyle="bold"
-            android:layout_marginTop="4dp"
-            android:textSize="15sp"
-            android:layout_toEndOf="@id/userIv"
-            android:text="Jhon Doe" />
-
-        <TextView
-            android:id="@+id/emailTv"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="jhondoe@example.com"
-            android:layout_below="@id/usernameTv"
-            android:textSize="13sp"
-            android:layout_alignStart="@id/usernameTv" />
+            android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/handphoneTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+6282100998877"
-            android:layout_below="@id/emailTv"
-            android:textSize="13sp"
-            android:layout_alignStart="@id/usernameTv" />
-
-        <ImageView
-            android:id="@+id/editIv"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/baseline_edit_24"
-            android:layout_alignParentEnd="true"
-            android:layout_alignTop="@id/usernameTv" />
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Akun"
-        android:textStyle="bold"
-        android:textSize="14sp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="8dp"/>
-
-    <TextView
-        android:id="@+id/pesanTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cara pesan"
-        android:textSize="14sp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:drawablePadding="8dp"
-        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
-        app:drawableStartCompat="@drawable/baseline_shopping_cart_24" />
-
-    <TextView
-        android:id="@+id/bayarTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cara bayar"
-        android:textSize="14sp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:drawablePadding="8dp"
-        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
-        app:drawableStartCompat="@drawable/baseline_payment_24" />
-
-    <TextView
-        android:id="@+id/bantuanTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pusat bantuan"
-        android:textSize="14sp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:drawablePadding="8dp"
-        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
-        app:drawableStartCompat="@drawable/baseline_help_24" />
-
-    <TextView
-        android:id="@+id/ajaktemanTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ajak teman, dapat voucher"
-        android:textSize="14sp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:drawablePadding="8dp"
-        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
-        app:drawableStartCompat="@drawable/baseline_group_24" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Info lainnya"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="8dp"/>
-
-    <TextView
-        android:id="@+id/kebijakanTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kebijakan privasi"
-        android:textSize="14sp"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        android:drawablePadding="8dp"
-        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
-        app:drawableStartCompat="@drawable/baseline_privacy_tip_24" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/appMode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_lightbulb_24"
-            android:textSize="14sp"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="12dp"
-            android:drawablePadding="8dp"
-            android:text="Matikan Lampu"/>
-
-        <Switch
-            android:id="@+id/switchTheme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:paddingEnd="8dp"
-            android:layout_alignTop="@id/appMode"
-            android:layout_alignBottom="@id/appMode"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_margin="16dp"
-            android:padding="14dp"
-            android:text="Sign Out"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/technicianCard"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/switchTheme"/>
+            android:backgroundTint="@color/primary"
+            android:layout_below="@id/usernameTv"
+            app:cardCornerRadius="16dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/opportunityTv"
+                    android:text="Are you a Technician?"
+                    android:layout_width="wrap_content"
+                    android:layout_alignTop="@id/joinBtn"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/opportunityDescTv"
+                    android:text="Join and earn some nice benefits"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/opportunityTv"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/joinBtn"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Join Now"
+                    android:textColor="@color/primary"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileCard"
+            app:cardCornerRadius="16dp"
+            android:layout_below="@id/technicianCard"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="1dp"
+            app:cardMaxElevation="1dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/infoTv"
+                    android:text="Profile Information"
+                    android:layout_width="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/editIv"
+                    android:src="@drawable/baseline_edit_24"
+                    android:layout_alignTop="@id/infoTv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/emailTv"
+                    android:text="username@example.com"
+                    android:layout_below="@id/infoTv"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/roleTv"
+                    android:layout_below="@id/emailTv"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Normal User"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/phoneTv"
+                    android:layout_below="@id/roleTv"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="082122009090"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/domisiliTv"
+                    android:layout_below="@id/phoneTv"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="Nanggeleng, Kota Sukabumi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/specializationTv"
+                    android:textSize="14sp"
+                    android:layout_below="@id/domisiliTv"
+                    android:layout_marginTop="10dp"
+                    android:text="Tukang Genteng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 </LinearLayout>
