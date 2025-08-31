@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/profileTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:text="Settings"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Akun"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"/>
+
+    <TextView
+        android:id="@+id/pesanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cara pesan"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_shopping_cart_24" />
+
+    <TextView
+        android:id="@+id/bayarTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cara bayar"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_payment_24" />
+
+    <TextView
+        android:id="@+id/bantuanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pusat bantuan"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_help_24" />
+
+    <TextView
+        android:id="@+id/ajaktemanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ajak teman, dapat voucher"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_group_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info lainnya"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"/>
+
+    <TextView
+        android:id="@+id/kebijakanTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kebijakan privasi"
+        android:textSize="14sp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:drawablePadding="8dp"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+        app:drawableStartCompat="@drawable/baseline_privacy_tip_24" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/appMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_lightbulb_24"
+            android:textSize="14sp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:drawablePadding="8dp"
+            android:text="Matikan Lampu"/>
+
+        <Switch
+            android:id="@+id/switchTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="8dp"
+            android:layout_alignTop="@id/appMode"
+            android:layout_alignBottom="@id/appMode"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_margin="16dp"
+            android:padding="14dp"
+            android:text="Sign Out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switchTheme"/>
+    </RelativeLayout>
+</LinearLayout>
