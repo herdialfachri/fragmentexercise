@@ -17,10 +17,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Ambil preferensi terlebih dahulu
         val preferences = getSharedPreferences("settings", Context.MODE_PRIVATE)
         val isNightMode = preferences.getBoolean("night_mode", false)
-        val lastFragment = preferences.getString("last_fragment", "home")
+        var lastFragment = preferences.getString("last_fragment", "home")
 
         if (isNightMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -34,7 +33,12 @@ class MainActivity : AppCompatActivity() {
         indicatorStrip = findViewById(R.id.indicatorStrip)
         bottomNav = findViewById(R.id.bottom_navigation)
 
-        // Tentukan fragment awal berdasarkan preferensi
+        // ✅ cek apakah ada "OPEN_FRAGMENT" dari Intent
+        val openFragment = intent.getStringExtra("OPEN_FRAGMENT")
+        if (openFragment != null) {
+            lastFragment = openFragment
+        }
+
         val initialIndex = when (lastFragment) {
             "profile" -> 3
             "history" -> 2
@@ -62,13 +66,10 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav.post { moveStripToIndex(initialIndex) }
 
-        // Reset fragment terakhir agar tidak berulang terus
-        preferences.edit().remove("last_fragment").apply()
-
-        // Setup navigasi
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> {
+                    saveLastFragment("home")
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, HomeFragment())
                         .commit()
@@ -76,6 +77,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_dashboard -> {
+                    saveLastFragment("dashboard")
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, DashboardFragment())
                         .commit()
@@ -83,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_history -> {
+                    saveLastFragment("history")
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, HistoryFragment())
                         .commit()
@@ -90,6 +93,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_profile -> {
+                    saveLastFragment("profile")
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, ProfileFragment())
                         .commit()
@@ -99,6 +103,11 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun saveLastFragment(tag: String) {
+        val preferences = getSharedPreferences("settings", Context.MODE_PRIVATE)
+        preferences.edit().putString("last_fragment", tag).apply()
     }
 
     private fun moveStripToIndex(index: Int) {
