@@ -1,5 +1,6 @@
 package com.example.fragmentexercise.api
 
+import com.example.fragmentexercise.data.Category
 import com.example.fragmentexercise.data.ForgotPasswordRequest
 import com.example.fragmentexercise.data.ForgotPasswordResponse
 import com.example.fragmentexercise.data.LoginRequest
@@ -7,8 +8,10 @@ import com.example.fragmentexercise.data.LoginResponse
 import com.example.fragmentexercise.data.LogoutResponse
 import com.example.fragmentexercise.data.RegisterRequest
 import com.example.fragmentexercise.data.RegisterResponse
+import com.example.fragmentexercise.data.Service
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
 
@@ -24,4 +27,10 @@ interface ApiService {
 
     @POST("api/forgot-password")
     fun forgotPassword(@Body request: ForgotPasswordRequest): Call<ForgotPasswordResponse>
+
+    @GET("api/categories")
+    fun getCategories(@Header("Authorization") token: String): Call<List<Category>>
+
+    @GET("api/services")
+    fun getServices(@Header("Authorization") token: String): Call<List<Service>>
 }
